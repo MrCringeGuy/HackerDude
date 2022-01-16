@@ -50,6 +50,7 @@ def hack_tutorial(name, bank):
 
     while True:
         print('Next, you must choose the mode. Type "datadump.SQLi".\n\n')
+        print('SQLi : Injects a custom database and dumps the database from the website.\nDDOS : Bombards the website with traffic until it is offline\nPhish : Creates a phishing clone.')
         cmd = input('>>> ')
         if cmd.lower() == 'datadump.sqli':
             clear()
@@ -69,6 +70,7 @@ def hack_tutorial(name, bank):
     time.sleep(1)
     print('Username: Charlie0283\nPassword: WellDone123!')
     print('\n\nNow that your first job is complete, send Charlie the account details and collect your money')
+    input('Press <ENTER> to continue...')
     clear()
     time.sleep(2)
     print(f'Hi Charie.\n\nYour website is not very safe. The details for your account:\nUsername: Charlie0283\nPassword: WellDone123!\n\n-{name}.')
@@ -77,23 +79,24 @@ def hack_tutorial(name, bank):
     print('You collected £300!')
     bank += 300
     print(f'You now have {bank} money!')
-    shop_tutorial(bank, name, creditdebt, creditnum)
+    shop_tutorial(bank, name, creditdebt, creditnum, VPNlvl)
 
 def shop_tutorial(bank, name, creditdebt, creditnum, VPNlvl):
     clear()
-    print('Welcome to the shop!')
-    print("This tutorial teaches you how to buy upgrades.\n Let's buy a VPN.")
-    print('\n\n[1] VPN (Level 1): £25\n[2] Proxies (Level 1: £100)\n[3] Toolkit (Level 2): £1000')
     while True:
+        print('Welcome to the shop!')
+        print("This tutorial teaches you how to buy upgrades.\n Let's buy a VPN.")
+        print('\n\n[1] VPN (Level 1): £25\n[2] Proxies (Level 1: £100)\n[3] Toolkit (Level 2): £1000')
         print('\nType "1".')
         cmd = input('>>> ')
-        if cmd = '1':
+        if cmd == '1':
             clear()
             break
         else:
             clear()
     VPNlvl +=1
     print('Higher VPN level = lower chance of being caught (Only useful in illegal jobs).')
+    print(f'You VPN is now level {VPNlvl}.')
     menu()
 
 def menu():
